@@ -1,0 +1,26 @@
+{
+    "sourceFile": "lib/screens/details.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1722034854375,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1722037096979,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,17 +1,32 @@\n import 'package:flutter/material.dart';\r\n+import 'package:flutter_application_1/custom/pizza.dart';\r\n \r\n-class detailscreen extends StatefulWidget {\r\n-  const detailscreen({super.key});\r\n+class PizzaDetailPage extends StatelessWidget {\r\n+  final Pizza pizza;\r\n \r\n-  @override\r\n-  State<detailscreen> createState() => _detailscreenState();\r\n-}\r\n+  const PizzaDetailPage({Key? key, required this.pizza}) : super(key: key);\r\n \r\n-class _detailscreenState extends State<detailscreen> {\r\n   @override\r\n   Widget build(BuildContext context) {\r\n     return Scaffold(\r\n-      \r\n+      appBar: AppBar(\r\n+        title: Text(pizza.name),\r\n+      ),\r\n+      body: Padding(\r\n+        padding: const EdgeInsets.all(16.0),\r\n+        child: Column(\r\n+          crossAxisAlignment: CrossAxisAlignment.start,\r\n+          children: [\r\n+            Image.network(pizza.imageUrl),\r\n+            SizedBox(height: 16),\r\n+            Text(pizza.name, style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),\r\n+            SizedBox(height: 8),\r\n+            Text(pizza.description),\r\n+            SizedBox(height: 16),\r\n+            Text('${pizza.price} EGP', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),\r\n+          ],\r\n+        ),\r\n+      ),\r\n     );\r\n   }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1722041834327,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,32 @@\n+import 'package:flutter/material.dart';\r\n+import 'package:flutter_application_1/custom/pizza.dart';\r\n+\r\n+class PizzaDetailPage extends StatelessWidget {\r\n+  final Pizza pizza;\r\n+\r\n+  const PizzaDetailPage({Key? key, required this.pizza}) : super(key: key);\r\n+\r\n+  @override\r\n+  Widget build(BuildContext context) {\r\n+    return Scaffold(\r\n+      appBar: AppBar(\r\n+        title: Text(pizza.name),\r\n+      ),\r\n+      body: Padding(\r\n+        padding: const EdgeInsets.all(16.0),\r\n+        child: Column(\r\n+          crossAxisAlignment: CrossAxisAlignment.start,\r\n+          children: [\r\n+            Image.network(pizza.imageUrl),\r\n+            SizedBox(height: 16),\r\n+            Text(pizza.name, style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),\r\n+            SizedBox(height: 8),\r\n+            Text(pizza.description),\r\n+            SizedBox(height: 16),\r\n+            Text('${pizza.price} EGP', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),\r\n+          ],\r\n+        ),\r\n+      ),\r\n+    );\r\n+  }\r\n+}\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1722034854375,
+            "name": "Commit-0",
+            "content": "import 'package:flutter/material.dart';\r\n\r\nclass detailscreen extends StatefulWidget {\r\n  const detailscreen({super.key});\r\n\r\n  @override\r\n  State<detailscreen> createState() => _detailscreenState();\r\n}\r\n\r\nclass _detailscreenState extends State<detailscreen> {\r\n  @override\r\n  Widget build(BuildContext context) {\r\n    return Scaffold(\r\n      \r\n    );\r\n  }\r\n}"
+        }
+    ]
+}

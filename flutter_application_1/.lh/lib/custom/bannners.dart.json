@@ -1,0 +1,18 @@
+{
+    "sourceFile": "lib/custom/bannners.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1722022043402,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1722022043402,
+            "name": "Commit-0",
+            "content": "import 'package:flutter/material.dart';\r\n\r\nclass banners extends StatefulWidget {\r\n  const banners({super.key});\r\n\r\n  @override\r\n  State<banners> createState() => _bannersState();\r\n}\r\n\r\nclass _bannersState extends State<banners> {\r\n  List<String> banners = [\r\n    \"https://www.dominos.co.in/blog/wp-content/uploads/2022/12/Blog-Banner-2-980x442.jpg\",\r\n    \"https://img.freepik.com/free-psd/food-menu-delicious-pizza-web-banner-template_106176-419.jpg\",\r\n    \"https://image.freepik.com/free-psd/pizza-sale-modern-web-banner-template-design_131196-137.jpg\",\r\n    \"https://static.vecteezy.com/system/resources/previews/023/961/870/original/pizza-banner-or-background-pizza-on-the-board-illustration-vector.jpg\",\r\n  ];\r\n  @override\r\n  Widget build(BuildContext context) {\r\n    return Container(\r\n      height: 250,\r\n      child: ListView.builder(\r\n         itemCount: banners.length,\r\n        scrollDirection: Axis.horizontal,\r\n        itemBuilder: (context, index) {\r\n          return Padding(\r\n            padding: const EdgeInsets.only(left:12.0 , right: 12 ),\r\n            child: Container(\r\n              decoration: BoxDecoration(\r\n                borderRadius: BorderRadius.circular(12),\r\n                boxShadow: [\r\n                    BoxShadow(\r\n                      blurRadius: 12,\r\n                      color: const Color.fromARGB(255, 192, 192, 192),\r\n                      offset: Offset(1, 1)\r\n                    ),\r\n                  ],\r\n                \r\n              ),\r\n              child: ClipRRect(\r\n                borderRadius: BorderRadius.circular(12),\r\n                child: Image.network(banners[index] , width: 300, height: 300, fit: BoxFit.cover,)),\r\n            ),\r\n          );\r\n        },\r\n       \r\n      ),\r\n    );\r\n  }\r\n}"
+        }
+    ]
+}

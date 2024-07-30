@@ -1,0 +1,18 @@
+{
+    "sourceFile": "lib/custom/customcircularavatar.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1722028334501,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1722028334501,
+            "name": "Commit-0",
+            "content": "import 'package:flutter/material.dart';\r\n\r\nclass CustomAvatar extends StatelessWidget {\r\n  final String imageUrl;\r\n  final String label;\r\n  final double radius;\r\n\r\n  const CustomAvatar({\r\n    Key? key,\r\n    required this.imageUrl,\r\n    required this.label,\r\n    this.radius = 40.0,\r\n  }) : super(key: key);\r\n\r\n  @override\r\n  Widget build(BuildContext context) {\r\n    return Column(\r\n      mainAxisAlignment: MainAxisAlignment.center,\r\n      children: [\r\n        CircleAvatar(\r\n          radius: radius,\r\n          backgroundImage: NetworkImage(imageUrl),\r\n        ),\r\n        SizedBox(height: 8.0),\r\n        Text(\r\n          label,\r\n          style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),\r\n        ),\r\n      ],\r\n    );\r\n  }\r\n}"
+        }
+    ]
+}

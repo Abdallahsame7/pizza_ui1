@@ -1,0 +1,30 @@
+{
+    "sourceFile": "lib/screens/home_screen.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1722022459665,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1722027240459,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import 'package:flutter/material.dart';\r\n import 'package:flutter_application_1/custom/appbar.dart';\r\n import 'package:flutter_application_1/custom/bannners.dart';\r\n-import 'package:flutter_application_1/custom/menu.dart';\r\n import 'package:flutter_application_1/custom/eating_way.dart';\r\n+import 'package:flutter_application_1/custom/menus.dart';\r\n \r\n class home extends StatefulWidget {\r\n   const home({super.key});\r\n \r\n"
+                },
+                {
+                    "date": 1722037096980,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import 'package:flutter/material.dart';\r\n import 'package:flutter_application_1/custom/appbar.dart';\r\n import 'package:flutter_application_1/custom/bannners.dart';\r\n import 'package:flutter_application_1/custom/eating_way.dart';\r\n-import 'package:flutter_application_1/custom/menus.dart';\r\n+import 'package:flutter_application_1/custom/main_menus.dart';\r\n \r\n class home extends StatefulWidget {\r\n   const home({super.key});\r\n \r\n"
+                },
+                {
+                    "date": 1722042279205,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import 'package:flutter/material.dart';\r\n import 'package:flutter_application_1/custom/appbar.dart';\r\n import 'package:flutter_application_1/custom/bannners.dart';\r\n import 'package:flutter_application_1/custom/eating_way.dart';\r\n-import 'package:flutter_application_1/custom/main_menus.dart';\r\n+import 'package:flutter_application_1/custom/first_menus.dart';\r\n \r\n class home extends StatefulWidget {\r\n   const home({super.key});\r\n \r\n"
+                }
+            ],
+            "date": 1722022459665,
+            "name": "Commit-0",
+            "content": "import 'package:flutter/material.dart';\r\nimport 'package:flutter_application_1/custom/appbar.dart';\r\nimport 'package:flutter_application_1/custom/bannners.dart';\r\nimport 'package:flutter_application_1/custom/menu.dart';\r\nimport 'package:flutter_application_1/custom/eating_way.dart';\r\n\r\nclass home extends StatefulWidget {\r\n  const home({super.key});\r\n\r\n  @override\r\n  State<home> createState() => _homeState();\r\n}\r\n\r\nclass _homeState extends State<home> {\r\n  @override\r\n  Widget build(BuildContext context) {\r\n    return Scaffold(\r\n      body: ListView(\r\n        children: [\r\n          appBar(),\r\n          SizedBox(height: 12,),\r\n          Way(),\r\n          SizedBox(height: 12,),\r\n          banners(),\r\n          SizedBox(height: 12,),\r\n          menu()\r\n        ],\r\n      ) ,\r\n    );\r\n  }\r\n}"
+        }
+    ]
+}

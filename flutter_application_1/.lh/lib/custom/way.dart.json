@@ -1,0 +1,18 @@
+{
+    "sourceFile": "lib/custom/way.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1722022249529,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1722022249529,
+            "name": "Commit-0",
+            "content": "import 'dart:ffi';\r\n\r\nimport 'package:flutter/material.dart';\r\n\r\nclass Way extends StatefulWidget {\r\n  const Way({super.key});\r\n\r\n  @override\r\n  State<Way> createState() => _WayState();\r\n}\r\n\r\nclass _WayState extends State<Way> {\r\n  int ontap  = 0;\r\n\r\n  List<Widget> icons = [\r\n    Icon(Icons.delivery_dining, size: 15), \r\n    Icon(Icons.motorcycle, size: 15),\r\n    Icon(Icons.car_rental, size: 15),\r\n    Icon(Icons.chair_outlined, size: 15),\r\n  ];\r\n\r\n  List<String> title = [\r\n    \"Delivery\", \"Curbside\", \"Self-Pickup\", \"Dine-in\"\r\n  ];\r\n\r\n  @override\r\n  Widget build(BuildContext context) {\r\n    return Container(\r\n      height: 100,\r\n      child: ListView.builder(\r\n        scrollDirection: Axis.horizontal,\r\n        itemCount: icons.length,\r\n        itemBuilder: (context, index) {\r\n          return InkWell(\r\n            onTap: () {\r\n              setState(() {\r\n                ontap = index; \r\n              });\r\n            },\r\n            child: Column(\r\n              children: [\r\n                Container(\r\n                  child: CircleAvatar(\r\n                    backgroundColor: Colors.white,\r\n                    radius: 30, \r\n                    child: icons[index],\r\n                  ),\r\n                ),\r\n                SizedBox(height: 5), \r\n                Text(title[index]),\r\n                if (ontap == index)\r\n                Container(\r\n                  height: 2, \r\n                  width: 40, \r\n                  color: Colors.red, \r\n                ), \r\n              ],\r\n            ),\r\n          );\r\n        },\r\n      ),\r\n    );\r\n  }\r\n}\r\n"
+        }
+    ]
+}

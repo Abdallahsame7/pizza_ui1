@@ -1,0 +1,66 @@
+{
+    "sourceFile": "lib/custom/eating_way.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 12,
+            "patches": [
+                {
+                    "date": 1722022534683,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1722022617976,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,32 +30,35 @@\n       child: ListView.builder(\r\n         scrollDirection: Axis.horizontal,\r\n         itemCount: icons.length,\r\n         itemBuilder: (context, index) {\r\n-          return InkWell(\r\n-            onTap: () {\r\n-              setState(() {\r\n-                ontap = index; \r\n-              });\r\n-            },\r\n-            child: Column(\r\n-              children: [\r\n-                Container(\r\n-                  child: CircleAvatar(\r\n-                    backgroundColor: Colors.white,\r\n-                    radius: 40, \r\n-                    child: icons[index],\r\n+          return Padding(\r\n+            padding: const EdgeInsets.only(left: 16),\r\n+            child: InkWell(\r\n+              onTap: () {\r\n+                setState(() {\r\n+                  ontap = index; \r\n+                });\r\n+              },\r\n+              child: Column(\r\n+                children: [\r\n+                  Container(\r\n+                    child: CircleAvatar(\r\n+                      backgroundColor: Colors.white,\r\n+                      radius: 30, \r\n+                      child: icons[index],\r\n+                    ),\r\n                   ),\r\n-                ),\r\n-                SizedBox(height: 5), \r\n-                Text(title[index]),\r\n-                if (ontap == index)\r\n-                Container(\r\n-                  height: 2, \r\n-                  width: 40, \r\n-                  color: Colors.red, \r\n-                ), \r\n-              ],\r\n+                  SizedBox(height: 5), \r\n+                  Text(title[index]),\r\n+                  if (ontap == index)\r\n+                  Container(\r\n+                    height: 2, \r\n+                    width: 40, \r\n+                    color: Colors.red, \r\n+                  ), \r\n+                ],\r\n+              ),\r\n             ),\r\n           );\r\n         },\r\n       ),\r\n"
+                },
+                {
+                    "date": 1722022626481,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n         scrollDirection: Axis.horizontal,\r\n         itemCount: icons.length,\r\n         itemBuilder: (context, index) {\r\n           return Padding(\r\n-            padding: const EdgeInsets.only(left: 16),\r\n+            padding: const EdgeInsets.only(left: 30),\r\n             child: InkWell(\r\n               onTap: () {\r\n                 setState(() {\r\n                   ontap = index; \r\n"
+                },
+                {
+                    "date": 1722022657117,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -41,12 +41,22 @@\n               },\r\n               child: Column(\r\n                 children: [\r\n                   Container(\r\n+                    decoration: BoxDecoration(\r\n+                       boxShadow: [\r\n+                BoxShadow(\r\n+                  blurRadius: 12,\r\n+                  color: Colors.grey,\r\n+                  offset: Offset(2, 2)\r\n+                )\r\n+              ],\r\n+                    ),\r\n                     child: CircleAvatar(\r\n                       backgroundColor: Colors.white,\r\n                       radius: 30, \r\n                       child: icons[index],\r\n+\r\n                     ),\r\n                   ),\r\n                   SizedBox(height: 5), \r\n                   Text(title[index]),\r\n"
+                },
+                {
+                    "date": 1722022664959,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -46,9 +46,9 @@\n                        boxShadow: [\r\n                 BoxShadow(\r\n                   blurRadius: 12,\r\n                   color: Colors.grey,\r\n-                  offset: Offset(2, 2)\r\n+                  offset: Offset(1, 1)\r\n                 )\r\n               ],\r\n                     ),\r\n                     child: CircleAvatar(\r\n"
+                },
+                {
+                    "date": 1722022679421,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,11 +42,12 @@\n               child: Column(\r\n                 children: [\r\n                   Container(\r\n                     decoration: BoxDecoration(\r\n+                      \r\n                        boxShadow: [\r\n                 BoxShadow(\r\n-                  blurRadius: 12,\r\n+                  blurRadius: 20,\r\n                   color: Colors.grey,\r\n                   offset: Offset(1, 1)\r\n                 )\r\n               ],\r\n"
+                },
+                {
+                    "date": 1722022685433,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,9 +45,9 @@\n                     decoration: BoxDecoration(\r\n                       \r\n                        boxShadow: [\r\n                 BoxShadow(\r\n-                  blurRadius: 20,\r\n+                  blurRadius: 25,\r\n                   color: Colors.grey,\r\n                   offset: Offset(1, 1)\r\n                 )\r\n               ],\r\n"
+                },
+                {
+                    "date": 1722022703913,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n         scrollDirection: Axis.horizontal,\r\n         itemCount: icons.length,\r\n         itemBuilder: (context, index) {\r\n           return Padding(\r\n-            padding: const EdgeInsets.only(left: 30),\r\n+            padding: const EdgeInsets.only(left: 28),\r\n             child: InkWell(\r\n               onTap: () {\r\n                 setState(() {\r\n                   ontap = index; \r\n"
+                },
+                {
+                    "date": 1722027240461,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,4 @@\n-import 'dart:ffi';\r\n-\r\n import 'package:flutter/material.dart';\r\n \r\n class Way extends StatefulWidget {\r\n   const Way({super.key});\r\n"
+                },
+                {
+                    "date": 1722042570585,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,9 +40,9 @@\n               child: Column(\r\n                 children: [\r\n                   Container(\r\n                     decoration: BoxDecoration(\r\n-                      \r\n+                      border: Border.all(color: ontap == index ? Colors.red : Colors.transparent),\r\n                        boxShadow: [\r\n                 BoxShadow(\r\n                   blurRadius: 25,\r\n                   color: Colors.grey,\r\n"
+                },
+                {
+                    "date": 1722042648524,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -41,8 +41,9 @@\n                 children: [\r\n                   Container(\r\n                     decoration: BoxDecoration(\r\n                       border: Border.all(color: ontap == index ? Colors.red : Colors.transparent),\r\n+                      borderRadius: BorderRadius.circular(12),\r\n                        boxShadow: [\r\n                 BoxShadow(\r\n                   blurRadius: 25,\r\n                   color: Colors.grey,\r\n"
+                },
+                {
+                    "date": 1722042656256,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -41,9 +41,9 @@\n                 children: [\r\n                   Container(\r\n                     decoration: BoxDecoration(\r\n                       border: Border.all(color: ontap == index ? Colors.red : Colors.transparent),\r\n-                      borderRadius: BorderRadius.circular(12),\r\n+                      borderRadius: BorderRadius.circular(25),\r\n                        boxShadow: [\r\n                 BoxShadow(\r\n                   blurRadius: 25,\r\n                   color: Colors.grey,\r\n"
+                },
+                {
+                    "date": 1722042666523,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -41,9 +41,9 @@\n                 children: [\r\n                   Container(\r\n                     decoration: BoxDecoration(\r\n                       border: Border.all(color: ontap == index ? Colors.red : Colors.transparent),\r\n-                      borderRadius: BorderRadius.circular(25),\r\n+                      borderRadius: BorderRadius.circular(30),\r\n                        boxShadow: [\r\n                 BoxShadow(\r\n                   blurRadius: 25,\r\n                   color: Colors.grey,\r\n"
+                }
+            ],
+            "date": 1722022534683,
+            "name": "Commit-0",
+            "content": "import 'dart:ffi';\r\n\r\nimport 'package:flutter/material.dart';\r\n\r\nclass Way extends StatefulWidget {\r\n  const Way({super.key});\r\n\r\n  @override\r\n  State<Way> createState() => _WayState();\r\n}\r\n\r\nclass _WayState extends State<Way> {\r\n  int ontap  = 0;\r\n\r\n  List<Widget> icons = [\r\n    Icon(Icons.delivery_dining, size: 15), \r\n    Icon(Icons.motorcycle, size: 15),\r\n    Icon(Icons.car_rental, size: 15),\r\n    Icon(Icons.chair_outlined, size: 15),\r\n  ];\r\n\r\n  List<String> title = [\r\n    \"Delivery\", \"Curbside\", \"Self-Pickup\", \"Dine-in\"\r\n  ];\r\n\r\n  @override\r\n  Widget build(BuildContext context) {\r\n    return Container(\r\n      height: 100,\r\n      child: ListView.builder(\r\n        scrollDirection: Axis.horizontal,\r\n        itemCount: icons.length,\r\n        itemBuilder: (context, index) {\r\n          return InkWell(\r\n            onTap: () {\r\n              setState(() {\r\n                ontap = index; \r\n              });\r\n            },\r\n            child: Column(\r\n              children: [\r\n                Container(\r\n                  child: CircleAvatar(\r\n                    backgroundColor: Colors.white,\r\n                    radius: 40, \r\n                    child: icons[index],\r\n                  ),\r\n                ),\r\n                SizedBox(height: 5), \r\n                Text(title[index]),\r\n                if (ontap == index)\r\n                Container(\r\n                  height: 2, \r\n                  width: 40, \r\n                  color: Colors.red, \r\n                ), \r\n              ],\r\n            ),\r\n          );\r\n        },\r\n      ),\r\n    );\r\n  }\r\n}\r\n"
+        }
+    ]
+}

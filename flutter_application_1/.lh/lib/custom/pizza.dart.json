@@ -1,0 +1,26 @@
+{
+    "sourceFile": "lib/custom/pizza.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1722031561995,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1722032238600,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,7 +4,8 @@\n   final String name;\r\n   final String description;\r\n   final String imageUrl;\r\n   final double price;\r\n+  final Widget icon;\r\n \r\n-  Pizza({ required this.description, required this.name, required this.imageUrl, required this.price});\r\n+  Pizza({required this.icon , required this.description, required this.name, required this.imageUrl, required this.price});\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1722037096979,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,5 +7,5 @@\n   final double price;\r\n   final Widget icon;\r\n \r\n   Pizza({required this.icon , required this.description, required this.name, required this.imageUrl, required this.price});\r\n-}\n\\ No newline at end of file\n+}\r\n"
+                }
+            ],
+            "date": 1722031561995,
+            "name": "Commit-0",
+            "content": "import 'package:flutter/material.dart';\r\n\r\nclass Pizza {\r\n  final String name;\r\n  final String description;\r\n  final String imageUrl;\r\n  final double price;\r\n\r\n  Pizza({ required this.description, required this.name, required this.imageUrl, required this.price});\r\n}"
+        }
+    ]
+}

@@ -1,0 +1,34 @@
+{
+    "sourceFile": "lib/custom/nav.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 4,
+            "patches": [
+                {
+                    "date": 1722022253839,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1722190727271,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,8 +10,10 @@\n }\r\n \r\n class _navigationState extends State<navigation> {\r\n    int _selectedIndex = 0; \r\n+\r\n+   \r\n   final List<Widget> _screens = [ \r\n     home(),\r\n     Cart(),\r\n    \r\n"
+                },
+                {
+                    "date": 1722192612436,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,13 @@\n   }\r\n   @override\r\n   Widget build(BuildContext context) {\r\n     return Scaffold(\r\n-         body: _screens[_selectedIndex], \r\n+         body:// _screens[_selectedIndex],\r\n+         IndexedStack(\r\n+        index: _selectedIndex,\r\n+        children: _screens,\r\n+      ), \r\n       bottomNavigationBar: BottomNavigationBar(\r\n         items: const <BottomNavigationBarItem>[\r\n           BottomNavigationBarItem(\r\n             icon: Icon(Icons.home),\r\n"
+                },
+                {
+                    "date": 1722193303914,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,13 +26,9 @@\n   }\r\n   @override\r\n   Widget build(BuildContext context) {\r\n     return Scaffold(\r\n-         body:// _screens[_selectedIndex],\r\n-         IndexedStack(\r\n-        index: _selectedIndex,\r\n-        children: _screens,\r\n-      ), \r\n+         body: _screens[_selectedIndex], \r\n       bottomNavigationBar: BottomNavigationBar(\r\n         items: const <BottomNavigationBarItem>[\r\n           BottomNavigationBarItem(\r\n             icon: Icon(Icons.home),\r\n"
+                },
+                {
+                    "date": 1722268895826,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,8 @@\n     setState(() {\r\n       _selectedIndex = index; \r\n     });\r\n   }\r\n-  @override\r\n   Widget build(BuildContext context) {\r\n     return Scaffold(\r\n          body: _screens[_selectedIndex], \r\n       bottomNavigationBar: BottomNavigationBar(\r\n"
+                }
+            ],
+            "date": 1722022253839,
+            "name": "Commit-0",
+            "content": "import 'package:flutter/material.dart';\r\nimport 'package:flutter_application_1/screens/cart.dart';\r\nimport 'package:flutter_application_1/screens/home_screen.dart';\r\n\r\nclass navigation extends StatefulWidget {\r\n  const navigation({super.key});\r\n\r\n  @override\r\n  State<navigation> createState() => _navigationState();\r\n}\r\n\r\nclass _navigationState extends State<navigation> {\r\n   int _selectedIndex = 0; \r\n  final List<Widget> _screens = [ \r\n    home(),\r\n    Cart(),\r\n   \r\n  ];\r\n\r\n  void _onItemTapped(int index) {\r\n    setState(() {\r\n      _selectedIndex = index; \r\n    });\r\n  }\r\n  @override\r\n  Widget build(BuildContext context) {\r\n    return Scaffold(\r\n         body: _screens[_selectedIndex], \r\n      bottomNavigationBar: BottomNavigationBar(\r\n        items: const <BottomNavigationBarItem>[\r\n          BottomNavigationBarItem(\r\n            icon: Icon(Icons.home),\r\n            label: 'Home',\r\n          ),\r\n          BottomNavigationBarItem(\r\n            icon: Icon(Icons.shopping_cart),\r\n            label: 'Cart',\r\n          ),\r\n        ],\r\n        currentIndex: _selectedIndex, \r\n        selectedItemColor: Colors.red,\r\n        unselectedItemColor: Colors.grey,\r\n        onTap: _onItemTapped, \r\n      ),\r\n    );\r\n  }\r\n}"
+        }
+    ]
+}

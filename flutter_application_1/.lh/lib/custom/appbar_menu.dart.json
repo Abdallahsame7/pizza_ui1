@@ -1,0 +1,26 @@
+{
+    "sourceFile": "lib/custom/appbar_menu.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1722027240450,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1722030996694,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,9 @@\n \r\n   @override\r\n   Widget build(BuildContext context) {\r\n     return AppBar(\r\n+      backgroundColor: Color.fromARGB(255, 223, 223, 223),\r\n       title: Text(\"Explore Menu\"),\r\n       leading: Padding(\r\n         padding: const EdgeInsets.only(left: 12, top: 4),\r\n         child: InkWell(\r\n"
+                },
+                {
+                    "date": 1722033532034,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n     return AppBar(\r\n       backgroundColor: Color.fromARGB(255, 223, 223, 223),\r\n       title: Text(\"Explore Menu\"),\r\n       leading: Padding(\r\n-        padding: const EdgeInsets.only(left: 12, top: 4),\r\n+        padding: const EdgeInsets.only(left: 12, top: 4, bottom: 4),\r\n         child: InkWell(\r\n           onTap: () {\r\n             Navigator.pop(context);\r\n           },\r\n"
+                }
+            ],
+            "date": 1722027240450,
+            "name": "Commit-0",
+            "content": "import 'package:flutter/material.dart';\r\n\r\nclass MenuAppBar extends StatelessWidget implements PreferredSizeWidget {\r\n  const MenuAppBar({super.key});\r\n\r\n  @override\r\n  Widget build(BuildContext context) {\r\n    return AppBar(\r\n      title: Text(\"Explore Menu\"),\r\n      leading: Padding(\r\n        padding: const EdgeInsets.only(left: 12, top: 4),\r\n        child: InkWell(\r\n          onTap: () {\r\n            Navigator.pop(context);\r\n          },\r\n          child: Container(\r\n            width: 50,\r\n            decoration: BoxDecoration(\r\n              color: Colors.white,\r\n              borderRadius: BorderRadius.circular(16),\r\n              boxShadow: [\r\n                BoxShadow(\r\n                  blurRadius: 1,\r\n                  spreadRadius: 1,\r\n                  color: Color.fromARGB(255, 192, 192, 192),\r\n                  blurStyle: BlurStyle.outer,\r\n                ),\r\n              ],\r\n            ),\r\n            child: Icon(Icons.arrow_back),\r\n          ),\r\n        ),\r\n      ),\r\n      actions: [\r\n        Padding(\r\n          padding: const EdgeInsets.only(right: 12),\r\n          child: Icon(Icons.search),\r\n        )\r\n      ],\r\n    );\r\n  }\r\n\r\n  @override\r\n  Size get preferredSize => Size.fromHeight(kToolbarHeight);\r\n}\r\n"
+        }
+    ]
+}

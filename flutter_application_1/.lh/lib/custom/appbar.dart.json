@@ -1,0 +1,18 @@
+{
+    "sourceFile": "lib/custom/appbar.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1722022278581,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1722022278581,
+            "name": "Commit-0",
+            "content": "import 'package:flutter/cupertino.dart';\r\nimport 'package:flutter/material.dart';\r\nimport 'package:flutter/widgets.dart';\r\n\r\nclass appBar extends StatelessWidget {\r\n  const appBar({super.key});\r\n\r\n  @override\r\n  Widget build(BuildContext context) {\r\n    return Padding(\r\n      padding: const EdgeInsets.all(14.0),\r\n      child: Row(\r\n        mainAxisAlignment: MainAxisAlignment.spaceAround,\r\n        children: [\r\n          Expanded(\r\n            child: Container(\r\n              width: 150,\r\n              height: 70,\r\n              margin: EdgeInsets.only(right: 9),\r\n                decoration: BoxDecoration(\r\n                  color: Colors.white,\r\n                  borderRadius: BorderRadius.circular(22),\r\n                  boxShadow: [\r\n                  BoxShadow(\r\n                    blurRadius: 12,\r\n                    color: Colors.grey,\r\n                    offset: Offset(2, 2)\r\n                  ),\r\n                ],\r\n                ),\r\n                child: ListTile(\r\n                  title: Text(\"Select Location\"),\r\n                  subtitle: Text(\"Nasr city\"),\r\n                  leading: Icon(Icons.menu),\r\n                  trailing: Icon(Icons.arrow_drop_down)\r\n                ),\r\n            ),\r\n          ),\r\n          Container(\r\n            width: 50,\r\n            height: 70,\r\n            decoration: BoxDecoration(\r\n              borderRadius: BorderRadius.circular(18),\r\n              color: Colors.white,\r\n              boxShadow: [\r\n                BoxShadow(\r\n                  blurRadius: 12,\r\n                  color: Colors.grey,\r\n                  offset: Offset(2, 2)\r\n                )\r\n              ],\r\n            ),\r\n            child: Center(child: Icon(Icons.notification_add_outlined)),\r\n          )\r\n          \r\n        ],\r\n      ),\r\n    );\r\n  }\r\n}"
+        }
+    ]
+}

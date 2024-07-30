@@ -1,0 +1,42 @@
+{
+    "sourceFile": "lib/main.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 6,
+            "patches": [
+                {
+                    "date": 1722022459659,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1722023083548,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n   // This widget is the root of your application.\r\n   @override\r\n   Widget build(BuildContext context) {\r\n     return MaterialApp(\r\n-      debugShowCheckedModeBanner: true,\r\n+      debugShowCheckedModeBanner: false,\r\n       title: 'Flutter Demo',\r\n       theme: ThemeData(\r\n         \r\n  \r\n"
+                },
+                {
+                    "date": 1722034854382,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n import 'package:flutter/material.dart';\r\n import 'package:flutter_application_1/custom/nav.dart';\r\n+import 'package:flutter_application_1/screens/cart.dart';\r\n import 'package:flutter_application_1/screens/home_screen.dart';\r\n import 'package:flutter_application_1/screens/menu.dart';\r\n \r\n void main() {\r\n@@ -26,8 +27,9 @@\n     routes: {\r\n       \"navigation\" :(context) => navigation(),\r\n       \"home\" :(context) => home(),\r\n       \"menuscreen\" :(context) => menuscreen(),\r\n+      \"Cart\" : (context) => Cart(),\r\n \r\n     },\r\n     );\r\n   }\r\n"
+                },
+                {
+                    "date": 1722037096972,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,9 @@\n import 'package:flutter/material.dart';\r\n import 'package:flutter_application_1/custom/nav.dart';\r\n+import 'package:flutter_application_1/custom/pizza.dart';\r\n import 'package:flutter_application_1/screens/cart.dart';\r\n+import 'package:flutter_application_1/screens/details.dart';\r\n import 'package:flutter_application_1/screens/home_screen.dart';\r\n import 'package:flutter_application_1/screens/menu.dart';\r\n \r\n void main() {\r\n@@ -28,9 +30,9 @@\n       \"navigation\" :(context) => navigation(),\r\n       \"home\" :(context) => home(),\r\n       \"menuscreen\" :(context) => menuscreen(),\r\n       \"Cart\" : (context) => Cart(),\r\n-\r\n+      \"PizzaDetailPage\" : (context) => PizzaDetailPage(pizza: Pizza(name: '', description: '', imageUrl: '', price: 0.0, icon: Icon(Icons.favorite)) ),\r\n     },\r\n     );\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1722190430696,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,9 @@\n     initialRoute: \"navigation\",\r\n     routes: {\r\n       \"navigation\" :(context) => navigation(),\r\n       \"home\" :(context) => home(),\r\n-      \"menuscreen\" :(context) => menuscreen(),\r\n+      \"menuscreen\" :(context) => menuscreen(selectedIndex: 0,),\r\n       \"Cart\" : (context) => Cart(),\r\n       \"PizzaDetailPage\" : (context) => PizzaDetailPage(pizza: Pizza(name: '', description: '', imageUrl: '', price: 0.0, icon: Icon(Icons.favorite)) ),\r\n     },\r\n     );\r\n"
+                },
+                {
+                    "date": 1722190449280,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,9 @@\n     initialRoute: \"navigation\",\r\n     routes: {\r\n       \"navigation\" :(context) => navigation(),\r\n       \"home\" :(context) => home(),\r\n-      \"menuscreen\" :(context) => menuscreen(selectedIndex: 0,),\r\n+      \"menuscreen\" :(context) => menuscreen(selectedIndex: 1),\r\n       \"Cart\" : (context) => Cart(),\r\n       \"PizzaDetailPage\" : (context) => PizzaDetailPage(pizza: Pizza(name: '', description: '', imageUrl: '', price: 0.0, icon: Icon(Icons.favorite)) ),\r\n     },\r\n     );\r\n"
+                },
+                {
+                    "date": 1722191855428,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,9 @@\n     initialRoute: \"navigation\",\r\n     routes: {\r\n       \"navigation\" :(context) => navigation(),\r\n       \"home\" :(context) => home(),\r\n-      \"menuscreen\" :(context) => menuscreen(selectedIndex: 1),\r\n+      \"menuscreen\" :(context) => menuscreen(selectedIndex: 0),\r\n       \"Cart\" : (context) => Cart(),\r\n       \"PizzaDetailPage\" : (context) => PizzaDetailPage(pizza: Pizza(name: '', description: '', imageUrl: '', price: 0.0, icon: Icon(Icons.favorite)) ),\r\n     },\r\n     );\r\n"
+                }
+            ],
+            "date": 1722022459659,
+            "name": "Commit-0",
+            "content": "import 'package:flutter/material.dart';\r\nimport 'package:flutter_application_1/custom/nav.dart';\r\nimport 'package:flutter_application_1/screens/home_screen.dart';\r\nimport 'package:flutter_application_1/screens/menu.dart';\r\n\r\nvoid main() {\r\n  runApp(const MyApp());\r\n}\r\n\r\nclass MyApp extends StatelessWidget {\r\n  const MyApp({super.key});\r\n\r\n  // This widget is the root of your application.\r\n  @override\r\n  Widget build(BuildContext context) {\r\n    return MaterialApp(\r\n      debugShowCheckedModeBanner: true,\r\n      title: 'Flutter Demo',\r\n      theme: ThemeData(\r\n        \r\n \r\n        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),\r\n        useMaterial3: true,\r\n      ),\r\n    initialRoute: \"navigation\",\r\n    routes: {\r\n      \"navigation\" :(context) => navigation(),\r\n      \"home\" :(context) => home(),\r\n      \"menuscreen\" :(context) => menuscreen(),\r\n\r\n    },\r\n    );\r\n  }\r\n}\r\n"
+        }
+    ]
+}
